@@ -1,0 +1,489 @@
+/* الأنماط العامة ولوحة الألوان */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+     --primary-color: #003366; /* أزرق بنفسجي عصري وجذاب */
+    --primary-hover: #61A5C8; /* لون أغمق عند التمرير */
+    --secondary-color: #61A5C8; /* أخضر مبهج للعناصر الثانوية (لم يعد يستخدم لـ .btn-secondary بعد التعديل) */
+    --secondary-hover: #38a169; /* لون أخضر أغمق */
+    --background-light: #edf2f7; /* خلفية ناعمة جداً، فاتحة */
+    --text-dark: #2d3748; /* لون نص داكن واضح */
+    --text-muted: #718096; /* لون نص خافت للخلفيات */
+    --white: #ffffff; /* اللون الأبيض */
+    --border-color: #e2e8f0; /* لون حدود فاتح */
+    --shadow-light: rgba(0, 0, 0, 0.05); /* ظل خفيف */
+    --shadow-medium: rgba(0, 0, 0, 0.1); /* ظل متوسط */
+    --border-radius-main: 18px; /* زوايا مستديرة للبطاقات الرئيسية */
+    --border-radius-input: 10px; /* زوايا مستديرة لحقول الإدخال والأزرار */
+    --transition-speed: 0.3s; /* سرعة الانتقال للعناصر التفاعلية */
+}
+
+/* إعادة تعيين الأنماط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5px;
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* أنماط صفحة المصادقة (التسجيل / تسجيل الدخول) */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width for the entire page container */
+    margin: auto; /* Center the whole auth page */
+}
+
+.auth-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-medium);
+    padding: 0; /* Changed to 0 as forms-wrapper will handle it */
+    width: auto; /* Changed from fixed width */
+    max-width: 90%; /* Allow more width for two columns */
+    margin: 5px; /* Add some margin around the card */
+    overflow: hidden; /* Ensure content respects border-radius */
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    border-top-left-radius: var(--border-radius-main);
+    border-top-right-radius: var(--border-radius-main);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-header .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-medium);
+    object-fit: cover;
+    border: 3px solid var(--white);
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.card-header p {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.card-header .highlight {
+    color: var(--secondary-color);
+}
+
+/* ==================================================================== */
+/* Login Specific Styles */
+/* ==================================================================== */
+
+.login-card {
+    /* Login card specific adjustments if needed, otherwise inherits from .auth-card */
+    padding-bottom: 20px; /* Add padding to the bottom of the card for content */
+}
+
+.login-form {
+    padding: 20px; /* Padding for the form itself */
+}
+
+/* General Form Group Styles (from register.css, adapted) */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block; /* Labels are not explicitly in login.html input-group, but good to keep */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 50px 10px 10px; /* حشو أكبر على اليمين للأيقونة في RTL */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-input);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    text-align: right; /* محاذاة النص المدخل لليمين */
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+    outline: none;
+}
+
+/* Input icons styling */
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* الأيقونة على اليمين في تخطيط RTL */
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* Options (Remember me & Forgot password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.options .forgot-password {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Checkbox styling */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-right: 25px; /* مسافة للأيقونة */
+    margin-bottom: 0; /* Adjust as needed */
+    cursor: pointer;
+    font-size: 0.9rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0; /* في RTL، العلامة على اليمين */
+    height: 18px;
+    width: 18px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+/* On mouse-over, add a light background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a primary color background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark indicator */
+.checkbox-container .checkmark:after {
+    left: 6px; /* Adjust position */
+    top: 2px; /* Adjust position */
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 8px 15px; /* حشو أقل لتقليل الارتفاع والعرض قليلاً */
+    border: none;
+    border-radius: var(--border-radius-input);
+    font-size: 1rem; /* حجم خط أصغر */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 8px rgba(90, 103, 216, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(90, 103, 216, 0.4);
+}
+
+/* Ripple effect for buttons (Optional, requires JS for full effect) */
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0); /* Force GPU acceleration */
+}
+/* Add JS for ripple effect if desired:
+   function createRipple(event) {
+     const button = event.currentTarget;
+     const circle = document.createElement('span');
+     const diameter = Math.max(button.clientWidth, button.clientHeight);
+     const radius = diameter / 2;
+     circle.style.width = circle.style.height = `${diameter}px`;
+     circle.style.left = `${event.clientX - (button.offsetLeft + radius)}px`;
+     circle.style.top = `${event.clientY - (button.offsetTop + radius)}px`;
+     circle.classList.add('ripple');
+     const ripple = button.getElementsByClassName('ripple')[0];
+     if (ripple) {
+       ripple.remove();
+     }
+     button.appendChild(circle);
+   }
+   const buttons = document.querySelectorAll('.ripple-effect');
+   buttons.forEach(button => button.addEventListener('click', createRipple));
+*/
+/* Ripple CSS (if using JS for effect)
+.ripple {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+*/
+
+/* Divider for "OR" */
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+    color: var(--text-muted);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.divider::before {
+    right: 0; /* Line on the right for RTL */
+}
+
+.divider::after {
+    left: 0; /* Line on the left for RTL */
+}
+
+.divider span {
+    background-color: var(--white);
+    padding: 0 10px;
+    position: relative;
+    z-index: 1; /* Ensure text is above lines */
+}
+
+/* Secondary Button (for "Create New Account") */
+.btn-secondary {
+text-align: center;    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 8px rgba(90, 103, 216, 0.3);
+  
+   padding: 8px 15px; 
+}
+
+.btn-secondary:hover {
+    color: white;
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(90, 103, 216, 0.4);
+}
+
+
+/* Animations (from register.css) */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pop {
+    animation: popIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation delays for staggered effect */
+.animate-slide-up:nth-child(1) { animation-delay: 0.1s; }
+.animate-slide-up:nth-child(2) { animation-delay: 0.2s; }
+.animate-slide-up:nth-child(3) { animation-delay: 0.3s; } /* For options div */
+.btn.animate-pop { animation-delay: 0.4s; } /* For login button */
+.btn-secondary.animate-pop { animation-delay: 0.5s; } /* For create account button */
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .auth-card {
+        max-width: 95%; /* Allow more width on smaller screens */
+        margin: 15px;
+    }
+    .card-header h2 {
+        font-size: 1.8rem;
+    }
+    .card-header p {
+        font-size: 0.9rem;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .login-form {
+        padding: 20px;
+    }
+    .form-group {
+        margin-bottom: 18px;
+    }
+    .form-group input {
+        padding: 10px 50px 10px 15px; /* تعديل الحشو للأجهزة الأصغر */
+        font-size: 0.95rem;
+    }
+    .input-group .icon {
+        right: 15px;
+        font-size: 1rem;
+    }
+    .options {
+        flex-direction: column; /* Stack checkbox and forgot password vertically */
+        align-items: flex-end; /* Align them to the right in RTL */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .checkbox-container {
+        width: 100%; /* Full width for checkbox */
+        text-align: right;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px; /* تعديل حشو الزر في الشاشات الصغيرة */
+    }
+    .divider::before,
+    .divider::after {
+        width: 35%; /* Adjust line width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        margin: 10px;
+    }
+    .login-form {
+        padding: 15px;
+    }
+    .card-header {
+        padding: 20px;
+    }
+    .form-group input {
+        padding: 10px 45px 10px 10px; /* تقليل الحشو قليلاً جداً للهواتف الصغيرة جداً */
+    }
+}

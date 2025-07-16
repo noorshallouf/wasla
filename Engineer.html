@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهندسونا - منصة وصلة</title>
+    <link rel="stylesheet" href="Engineer.css">
+    <link rel="icon" type="image/png" href="images/Wasla.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="doctors-page">
+
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <div class="doctors-container">
+        <div class="doctors-header">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للمنصة</a>
+            <h1>تعرف على مهندسينا وخبراؤنا</h1>
+            <p>اختر التخصص الذي تبحث عنه لمعرفة المزيد وحجز موعد.</p>
+        </div>
+
+        <div class="search-section">
+            <label for="engineer-search">ابحث عن مهندس:</label>
+            <input type="text" id="engineer-search" placeholder="ابحث بالاسم أو التخصص...">
+            <button class="search-button"><i class="fas fa-search"></i> بحث</button>
+        </div>
+
+       
+
+        <section id="find-engineer" class="engineers-section section-padding">
+            <div class="container">
+                <h2 class="section-title">قابل مهندسينا المتخصصين في ليبيا</h2>
+                <p class="section-subtitle">نخبة من المهندسين المعتمدين في مختلف التخصصات.</p>
+
+                <div class="filter-bar">
+                    <input type="text" id="filter-search-input" placeholder="ابحث بالاسم أو التخصص...">
+                    <select id="filter-specialty">
+                        <option value="">جميع التخصصات</option>
+                        <option value="مدني">مهندس مدني</option>
+                        <option value="معماري">مهندس معماري</option>
+                        <option value="كهرباء">مهندس كهرباء</option>
+                        <option value="ميكانيكا">مهندس ميكانيكا</option>
+                        <option value="برمجيات">مهندس برمجيات</option>
+                        <option value="بترول">مهندس بترول</option>
+                        <option value="اتصالات">مهندس اتصالات</option>
+                        <option value="كيميائي">مهندس كيميائي</option>
+                    </select>
+                    <select id="filter-city">
+                        <option value="">جميع المدن</option>
+                        <option value="طرابلس">طرابلس</option>
+                        <option value="بنغازي">بنغازي</option>
+                        <option value="مصراتة">مصراتة</option>
+                        <option value="سبها">سبها</option>
+                        <option value="الزاوية">الزاوية</option>
+                        <option value="الخمس">الخمس</option>
+                        <option value="درنة">درنة</option>
+                        <option value="زليتن">زليتن</option>
+                        <option value="البيضاء">البيضاء</option>
+                    </select>
+                    <button class="btn btn-primary" id="apply-filters-button">بحث</button>
+                </div>
+
+                <div class="entity-grid"> 
+                    <div class="entity-card"> <img src="khansa/Engineen2.jpg" alt="أ. محمد العلي">
+                        <h3>أ. محمد العلي</h3>
+                        <p class="specialty">مهندس مدني</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 10 سنوات خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 75 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star"></i>
+                            <span>(4.5 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+
+                    <div class="entity-card">
+                        <img src="khansa/Engineer-womanar.jpg" alt="م. فاطمة السعدي">
+                        <h3>م. فاطمة السعدي</h3>
+                        <p class="specialty">مهندسة معمارية</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> بنغازي، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 8 سنوات خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 60 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i>
+                            <span>(5.0 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+
+                    <div class="entity-card">
+                        <img src="khansa/electronicEngineer.webp" alt="أ. أحمد الليبي">
+                        <h3>أ. أحمد الزرقاني</h3>
+                        <p class="specialty">مهندس كهرباء</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> مصراتة، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 12 سنة خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 90 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(3.5 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+
+                    <div class="entity-card">
+                        <img src="khansa/micanicEnginerr.jpg" alt="م. ليلى علي">
+                        <h3>م. ليلى علي</h3>
+                        <p class="specialty">مهندسة ميكانيكا</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> سبها، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 7 سنوات خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 50 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star"></i>
+                            <span>(4.0 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+
+                    <div class="entity-card">
+                        <img src="khansa/camstryEng.webp" alt="أ. ناصر العمراني">
+                        <h3>أ. ناصر العمراني</h3>
+                        <p class="specialty">مهندس كيميائي</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> الزاوية، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 15 سنة خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 100 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i>
+                            <span>(5.0 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+
+                    <div class="entity-card">
+                        <img src="khansa/c.jpg" alt="م. هدى الفيتوري">
+                        <h3>م. هدى الفيتوري</h3>
+                        <p class="specialty">مهندسة برمجيات</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+                        <p class="experience"><i class="fas fa-briefcase"></i> 6 سنوات خبرة</p>
+                        <p class="bookings"><i class="fas fa-calendar-check"></i> 45 حجزاً ناجحاً</p>
+                        <div class="rating">
+                            <i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star active"></i><i class="fas fa-star"></i>
+                            <span>(4.5 / 5)</span>
+                        </div>
+                        <a href="contactForm.html" class="btn btn-secondary book-btn">احجز موعداً</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="services" class="services-section section-padding">
+            <div class="container">
+                <h2 class="section-title">خدماتنا الشاملة</h2>
+                <p class="section-subtitle">نقدم مجموعة واسعة من الخدمات الهندسية لتلبية كافة احتياجاتك.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>تصميم وهندسة معمارية</h3>
+                        <p>تصميمات معمارية مبتكرة وعصرية للمباني السكنية والتجارية، مع مراعاة الجودة والاستدامة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>إشراف وتنفيذ مشاريع</h3>
+                        <p>إدارة وإشراف هندسي متكامل للمشاريع، لضمان التنفيذ الدقيق والجودة العالية في كل مرحلة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>استشارات هندسية</h3>
+                        <p>تقديم استشارات فنية متخصصة في مختلف المجالات الهندسية، لمساعدتك في اتخاذ القرارات الصحيحة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <h3>إعداد دراسات الجدوى</h3>
+                        <p>تحليل وتقييم شامل للمشاريع الهندسية لضمان جدواها الاقتصادية والفنية قبل البدء بالتنفيذ.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3>مسح كميات وحصر أعمال</h3>
+                        <p>تقدير دقيق للكميات وحصر للأعمال الإنشائية لتحديد التكاليف والجداول الزمنية بكفاءة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>صيانة وتأهيل منشآت</h3>
+                        <p>خدمات صيانة وإعادة تأهيل للمنشآت القديمة والجديدة لضمان سلامتها واستدامتها على المدى الطويل.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section section-padding">
+            <div class="container">
+                <h2 class="section-title">ماذا يقول عملاؤنا</h2>
+                <p class="section-subtitle">شهادات من عملاء راضين عن خدماتنا الهندسية.</p>
+
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <div class="client-info">
+                            <img src="masara/e2.jpg" alt="صورة العميل">
+                            <div>
+                                <h4>أحمد الساعدي</h4>
+                                <p>مطور عقاري</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="quote">
+                            "التعامل مع فريق Wasla كان تجربة ممتازة، قاموا بتصميم مشروعنا الجديد بدقة واحترافية عالية، وتجاوزوا توقعاتنا بكثير. نوصي بهم بشدة!"
+                        </p>
+                        <div class="pagination-dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="masara/e1.jpg" alt="صورة توضيحية لشهادة عميل">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك وتقديم الدعم.</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>معلومات الاتصال</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا - شارع عمر المختار</p>
+                        <p><i class="fas fa-phone"></i> +218 91 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> wasla@gmail.com</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>أرسل لنا رسالة</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="contact-name">اسمك:</label>
+                                <input type="text" id="contact-name" name="contact-name" required placeholder="أدخل اسمك">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">بريدك الإلكتروني:</label>
+                                <input type="email" id="contact-email" name="contact-email" required placeholder="أدخل بريدك الإلكتروني">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">الموضوع:</label>
+                                <input type="text" id="contact-subject" name="contact-subject" required placeholder="موضوع الرسالة">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">رسالتك:</label>
+                                <textarea id="contact-message" name="contact-message" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+                 <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.076629919598!2d13.1852233!3d32.8872081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x139839352e824151%3A0x6b801a6b0c2a5c4e!2sTripoli%2C%20Libya!5e0!3m2!1sen!2sus!4v1701720000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInputTop = document.getElementById('engineer-search');
+            const searchButtonTop = document.querySelector('.search-section .search-button');
+            
+            const filterSearchInput = document.getElementById('filter-search-input');
+            const filterSpecialtySelect = document.getElementById('filter-specialty');
+            const filterCitySelect = document.getElementById('filter-city');
+            const applyFiltersButton = document.getElementById('apply-filters-button');
+            
+            const engineerCards = document.querySelectorAll('.entity-grid .entity-card');
+
+            function filterEngineers() {
+                const searchTermTop = searchInputTop.value.toLowerCase();
+                const searchTermFilter = filterSearchInput.value.toLowerCase();
+                const selectedSpecialty = filterSpecialtySelect.value;
+                const selectedCity = filterCitySelect.value;
+
+                engineerCards.forEach(card => {
+                    const name = card.querySelector('h3').textContent.toLowerCase();
+                    const specialty = card.querySelector('.specialty').textContent.toLowerCase();
+                    const location = card.querySelector('.location').textContent.toLowerCase();
+
+                    const matchesSearchTop = searchTermTop === '' || name.includes(searchTermTop) || specialty.includes(searchTermTop);
+                    const matchesSearchFilter = searchTermFilter === '' || name.includes(searchTermFilter) || specialty.includes(searchTermFilter);
+                    const matchesSpecialty = selectedSpecialty === '' || specialty.includes(selectedSpecialty.toLowerCase());
+                    const matchesCity = selectedCity === '' || location.includes(selectedCity.toLowerCase());
+
+                    // Combine conditions: either top search matches, or filter bar search/filters match
+                    if ((matchesSearchTop || searchTermTop === '') && matchesSearchFilter && matchesSpecialty && matchesCity) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Event Listeners for the top search bar
+            searchInputTop.addEventListener('keyup', filterEngineers);
+            searchButtonTop.addEventListener('click', filterEngineers);
+
+            // Event Listeners for the filter bar
+            filterSearchInput.addEventListener('keyup', filterEngineers);
+            filterSpecialtySelect.addEventListener('change', filterEngineers);
+            filterCitySelect.addEventListener('change', filterEngineers);
+            applyFiltersButton.addEventListener('click', filterEngineers);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أطباؤنا وخبراؤنا - منصة وصلة</title>
+    <link rel="stylesheet" href="doctors.css">
+    <link rel="icon" type="image/png" href="images/Wasla.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="doctors-page">
+    <div class="doctors-container">
+        <div class="doctors-header">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للمنصة</a>
+            <h1>تعرف على خبرائنا</h1>
+            <p>اختر التخصص الذي تبحث عنه لمعرفة المزيد وحجز موعد.</p>
+        </div>
+
+        <div class="search-section">
+            <label for="doctor-search">ابحث عن طبيب:</label>
+            <input type="text" id="doctor-search" placeholder="ابحث بالاسم أو التخصص...">
+            <button class="search-button"><i class="fas fa-search"></i> بحث</button>
+        </div>
+
+        <div class="specializations-section">
+            <h2>التخصصات المتاحة</h2>
+            <div class="specialization-list">
+                <a href="dental.html" class="specialization-card">
+                    <i class="fas fa-tooth"></i>
+                    <h3>طب الأسنان</h3>
+                    <p>أطباء أسنان متخصصون لابتسامة صحية.</p>
+                </a>
+                <a href="dermatology.html" class="specialization-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>الجلدية</h3>
+                    <p>حلول للعناية بالبشرة وجمالها.</p>
+                </a>
+                <a href="#" class="specialization-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>جراحة الأعصاب</h3>
+                    <p>هذا التخصص سيكون متاحاً قريباً.</p>
+                </a>
+                <a href="#" class="specialization-card">
+                    <i class="fas fa-child"></i>
+                    <h3>طب الأطفال</h3>
+                    <p>هذا التخصص سيكون متاحاً قريباً.</p>
+                </a>
+                <a href="cardiology.html" class="specialization-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>أمراض القلب</h3>
+                    <p>هذا التخصص سيكون متاحاً قريباً.</p>
+                </a>
+            </div>
+        </div>
+
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <h2 class="section-title">خدماتنا الطبية الشاملة</h2>
+                <p class="section-subtitle">نقدم مجموعة واسعة من الخدمات الطبية لتلبية كافة احتياجاتك الصحية.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>استشارات طبية عامة</h3>
+                        <p>استشارات أولية وتشخيص للحالات العامة، مع توجيه للعلاج المناسب أو التخصص المطلوب.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <h3>وصفات طبية ومتابعة</h3>
+                        <p>إصدار وصفات طبية إلكترونية ومتابعة فعالية العلاج والتكيف حسب الحاجة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>فحوصات دورية وصحية</h3>
+                        <p>إجراء فحوصات شاملة للكشف المبكر عن الأمراض وتقييم الحالة الصحية العامة.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <h3>تطعيمات ووقاية</h3>
+                        <p>تقديم كافة أنواع التطعيمات الضرورية للوقاية من الأمراض المعدية وتوعية صحية.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h3>إحالات وتحاليل</h3>
+                        <p>توجيه المرضى لإجراء تحاليل مخبرية وفحوصات إشعاعية متخصصة ومتابعة النتائج.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-circle">
+                            <i class="fas fa-first-aid"></i>
+                        </div>
+                        <h3>إسعافات أولية وطوارئ</h3>
+                        <p>خدمات إسعافات أولية للحالات الطارئة وتوجيه للحصول على الرعاية الفورية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section section-padding">
+            <div class="container">
+                <h2 class="section-title">ماذا يقول مرضانا</h2>
+                <p class="section-subtitle">شهادات من مرضى راضين عن خدماتنا الطبية.</p>
+
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        <div class="client-info">
+                            <img src="masara/p1.jpg" alt="صورة العميل">
+                            <div>
+                                <h4>ليلى محمد</h4>
+                                <p>مريضة سابقة</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="quote">
+                            "تجربتي مع منصة AZ كانت رائعة، سهولة في حجز المواعيد واستشارات طبية دقيقة ومفيدة. أنصح بها كل مريض يبحث عن رعاية ممتازة!"
+                        </p>
+                        <div class="pagination-dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك وتقديم الدعم.</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>معلومات الاتصال</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا - شارع صلاح الدين</p>
+                        <p><i class="fas fa-phone"></i> +218 92 987 6543</p>
+                        <p><i class="fas fa-envelope"></i> contact@azplatform.ly</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                 <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.076629919598!2d13.1852233!3d32.8872081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x139839352e824151%3A0x6b801a6b0c2a5c4e!2sTripoli%2C%20Libya!5e0!3m2!1sen!2sus!4v1701720000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('doctor-search');
+            const specializationCards = document.querySelectorAll('.specialization-card');
+
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                specializationCards.forEach(card => {
+                    const specializationName = card.querySelector('h3').textContent.toLowerCase();
+                    const specializationDescription = card.querySelector('p').textContent.toLowerCase();
+
+                    if (specializationName.includes(searchTerm) || specializationDescription.includes(searchTerm)) {
+                        card.style.display = 'flex'; // Show the card
+                    } else {
+                        card.style.display = 'none'; // Hide the card
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

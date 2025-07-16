@@ -1,0 +1,420 @@
+/* الأنماط العامة ولوحة الألوان */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #003366; /* أزرق بنفسجي عصري وجذاب */
+    --primary-hover: #61A5C8; /* لون أغمق عند التمرير */
+    --secondary-color: #61A5C8; /* أخضر مبهج للعناصر الثانوية */
+    --secondary-hover: #38a169; /* لون أخضر أغمق */
+    --background-light: #edf2f7; /* خلفية ناعمة جداً، فاتحة */
+    --text-dark: #2d3748; /* لون نص داكن واضح */
+    --text-muted: #718096; /* لون نص خافت للخلفيات */
+    --white: #ffffff; /* اللون الأبيض */
+    --border-color: #e2e8f0; /* لون حدود فاتح */
+    --shadow-light: rgba(0, 0, 0, 0.05); /* ظل خفيف */
+    --shadow-medium: rgba(0, 0, 0, 0.1); /* ظل متوسط */
+    --border-radius-main: 18px; /* زوايا مستديرة للبطاقات الرئيسية */
+    --border-radius-input: 10px; /* زوايا مستديرة لحقول الإدخال والأزرار */
+    --transition-speed: 0.3s; /* سرعة الانتقال للعناصر التفاعلية */
+}
+
+/* إعادة تعيين الأنماط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* أنماط صفحة المصادقة (التسجيل / تسجيل الدخول) */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width for the entire page container */
+    margin: auto; /* Center the whole auth page */
+}
+
+.auth-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-medium);
+    padding: 0; /* Changed to 0 as forms-wrapper will handle it */
+    width: auto; /* Changed from fixed width */
+    max-width: 90%; /* Allow more width for two columns */
+    margin: 20px; /* Add some margin around the card */
+    overflow: hidden; /* Ensure content respects border-radius */
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px;
+    border-top-left-radius: var(--border-radius-main);
+    border-top-right-radius: var(--border-radius-main);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-header .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-medium);
+    object-fit: cover;
+    border: 3px solid var(--white);
+}
+
+.card-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.card-header .highlight {
+    color: var(--secondary-color);
+}
+
+/* ==================================================================== */
+/* Forms Wrapper and Individual Form Styling */
+/* ==================================================================== */
+.forms-wrapper {
+    display: flex;
+    flex-direction: row; /* Default to row for side-by-side */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between forms */
+    padding: 30px; /* Padding for the wrapper inside the card */
+    justify-content: center; /* Center forms horizontally */
+    align-items: flex-start; /* Align forms to the top */
+}
+
+.register-form,
+.service-provider-fields {
+    flex: 1; /* Allow both forms to take equal width */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding: 25px; /* Inner padding for each form */
+    background-color: var(--white);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-light); /* Individual form shadow */
+    transition: all 0.4s ease-in-out; /* Smooth transition for display changes */
+}
+
+/* Service Provider Fields Specific Styling */
+.service-provider-fields {
+    max-height: none !important; /* Ensure no max-height interferes */
+    overflow: visible !important; /* Ensure content is visible */
+    border: 1px solid var(--border-color); /* Add a border for visual separation */
+}
+
+.service-provider-fields.hidden-form {
+    display: none; /* Hide by default */
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when hidden */
+    transform: translateX(20px); /* Optional: slight slide effect on hide */
+}
+
+.service-provider-fields.visible-form {
+    display: block; /* Show when active */
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction */
+    transform: translateX(0); /* Optional: reset slide effect */
+}
+
+.service-provider-fields .section-title {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service-provider-fields .section-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.service-provider-fields .subscription-note {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-input);
+    padding: 15px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.service-provider-fields .subscription-note i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+
+/* General Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 60px 12px 15px; /* تم التعديل: زيادة الحشو الأيمن (60px) لتوفير مساحة أكبر للأيقونة */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-input);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: right; 
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.input-group .icon {
+    position: absolute;
+    top: 70%;
+    right: 15px; /* الأيقونة على اليمين في تخطيط RTL */
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* Select specific styling */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '\f078'; /* Unicode for angle-down icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 15px; /* تبقى في اليسار لجذب الانتباه كقائمة منسدلة في RTL */
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius-input);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 8px rgba(90, 103, 216, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(90, 103, 216, 0.4);
+}
+
+/* Login Prompt */
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pop {
+    animation: popIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation delays for staggered effect */
+.animate-slide-up:nth-child(1) { animation-delay: 0.1s; }
+.animate-slide-up:nth-child(2) { animation-delay: 0.2s; }
+.animate-slide-up:nth-child(3) { animation-delay: 0.3s; }
+.animate-slide-up:nth-child(4) { animation-delay: 0.4s; }
+.animate-slide-up:nth-child(5) { animation-delay: 0.5s; }
+.animate-slide-up:nth-child(6) { animation-delay: 0.6s; }
+
+.btn.animate-pop { animation-delay: 0.7s; }
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .forms-wrapper {
+        flex-direction: column; /* Stack forms vertically on small screens */
+        gap: 20px;
+        padding: 20px;
+    }
+    .register-card {
+        padding: 0; /* No padding needed as forms handle it */
+    }
+    .register-form,
+    .service-provider-fields {
+        min-width: unset; /* Remove min-width to allow full width stacking */
+        width: 100%; /* Take full width */
+        padding: 20px; /* Adjust padding for small screens */
+    }
+    .card-header h2 {
+        font-size: 1.8rem;
+    }
+    .card-header p {
+        font-size: 0.9rem;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .form-group {
+        margin-bottom: 18px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { /* أضف textarea للتناسق */
+        padding: 10px 55px 10px 15px; /* تم التعديل: زيادة الحشو الأيمن في الشاشات الصغيرة */
+        font-size: 0.95rem;
+    }
+    .input-group .icon {
+        right: 15px; /* الأيقونة على اليمين في RTL */
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .service-provider-fields .section-title {
+        font-size: 1.4rem;
+    }
+    .service-provider-fields .subscription-note {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        margin: 10px;
+    }
+    .forms-wrapper {
+        padding: 15px;
+    }
+    .register-form,
+    .service-provider-fields {
+        padding: 15px;
+    }
+    .card-header {
+        padding: 20px;
+    }
+}
